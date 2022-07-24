@@ -75,9 +75,11 @@ const Inputs: React.FunctionComponent = (props:any) => {
     Examples.Physics,
     Examples.Electronics,
     Examples.Informatics,
-    Examples.Chemistry,
     Examples.Economics,
+    Examples.Chemistry,
+    Examples.Biophysics,
     Examples.Telecommunications,
+    Examples.Astrophysics,
     Examples.PhysicsNanostr,
     Examples.PhysicsNuclear,
     Examples.QuantumEngineering

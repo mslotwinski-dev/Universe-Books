@@ -210,7 +210,7 @@ const Economics: Data = {
   title_2: '',
 
   AUTHOR: ['Mateusz Słotwiński'],
-  color: '#2e7d32',
+  color: '#6E939E',
   icon: 'economics.svg',
   pages: 500,
   image: 'economics.jpg',
@@ -247,15 +247,76 @@ const Telecommunications: Data = {
 
 const Biophysics: Data = {
   TITLE: 'Biofizyka',
-  title_2: '',
+  title_2: 'i fizyka medyczna',
   AUTHOR: ['Mateusz Słotwiński'],
   color: '#2e7d32',
   icon: 'biophysics.svg',
   pages: 500,
-  image: 'economics.jpg',
+  image: 'biophysics.jpg',
   about: aboutplaceholder,
-  levels: [['']],
+  levels: [
+    [
+      'Wprowadzenie do zastosowań fizyki i metod fizycznych',
+      'w biologii i medycynie, genetyka i biologia molekularna',
+    ],
+    [
+      'Wstęp do biofizyki, fizyka i biomechanika komórki, struktura',
+      'oraz funkcje cząsteczek i makrocząsteczek biologicznych',
+    ],
+    [
+      'Metody biofizyki molekularnej, biofizyka doświadczalna,',
+      'mechanika kwantowa układów molekularnych',
+    ],
+    [
+      'Fizyka medyczna, wprowadzenie do nauk medycznych,',
+      'promieniowanie, ochrona radiologiczna i dozymetria',
+    ],
+    [
+      'Optyka biomedyczna i okularowa, optometria, biofizyka',
+      'zmysłów, radiofarmaceutyki, radiochemia, radiologia',
+    ],
+    [
+      'Nanomateriały i nanotechnologie w medycynie, analiza',
+      'i przetwarzanie obrazu mikroskopowego,',
+    ],
+    [
+      'Elektroniczna aparatura medyczna, biomechanika',
+      'inżynierska, podstawy inżynierii biomedycznej',
+    ],
+    ['Bioinformatyka i biologia obliczeniowa, biocybernetyka'],
+    [
+      'Metody fizyki i informatyki w neurobiologii, neurofizyka,',
+      'neuroinformatyka, sztuczna inteligencja i sieci neuronowe',
+    ],
+  ],
 
+  PART: 0,
+  SUBTITLE: ['', ''],
+}
+
+const Astrophysics: Data = {
+  TITLE: 'Astrofizyka',
+  title_2: 'i Astronomia',
+  AUTHOR: ['Mateusz Słotwiński'],
+  color: '#3A5489',
+  icon: 'astronomy.svg',
+  pages: 500,
+  image: 'astronomy.jpg',
+  about: aboutplaceholder,
+  levels: [
+    ['Astronomia ogólna i sferyczna'],
+    ['Astronomia pozagalaktyczna'],
+    ['Grawitacja i fale grawitacyjne, teoria wzlędności', 'i mechanika nieba'],
+    ['Astrofizyka ogólna i teoretyczna'],
+    ['Budowa i ewolucja gwiazd, czarne dziury'],
+    [
+      'Astrofizyka obiektów zwartych, soczewkowanie grawitacyjne,',
+      'białe karły, gwiazdy neutronowe, pulsary, supernowe',
+    ],
+    ['Astrofizyka obserwacyjna'],
+    ['Radioastronomia, materia z kosmosu,', 'astrofizyka wysokich energii'],
+    ['Kosmologia teoretyczna'],
+  ],
   PART: 0,
   SUBTITLE: ['', ''],
 }
@@ -308,16 +369,23 @@ const PhysicsNuclear: Data = {
   levels: [
     ['Fizyka cząstek i oddziaływań elementarnych,', 'wstęp do fizyki atomowej'],
     [
-      'Zaawansowana fizyka jądrowa, oddziaływanie',
-      'promieniowania jonizującego z materią',
+      'Zaawansowana fizyka jądrowa, fizyka zderzeń jąder atomowych',
+      'oddziaływanie promieniowania jonizującego z materią,',
     ],
-    ['Metody i techniki jądrowe, dozymetria'],
-    ['Podstawy fizyczne energetyki jądrowej'],
-    ['Detekcja promieniowania jądrowego, modelowanie', 'procesów jądrowych'],
     [
-      'Układy kontrolno-pomiarowe w instalacjach jądrowych,',
+      'Metody i techniki jądrowe, detekcja i analiza promieniowania',
+      'jądrowego oraz substancji promieniotwórczych',
+    ],
+    [
+      'Fizyka reaktorów jądrowych, energetyka jądrowa,',
       'nowe rozwiązania w energetyce jądrowej',
     ],
+    [
+      'Narzędzia komputerowe fizyki jądrowej,',
+      'modelowanie procesów jądrowych',
+    ],
+    ['Układy kontrolno-pomiarowe w instalacjach jądrowych', ''],
+    ['Dozymetria, ochrona radiologiczna i bezpieczeństwo jądrowe'],
   ],
 
   PART: 0,
@@ -329,7 +397,7 @@ const QuantumEngineering: Data = {
   TITLE: 'Inżynieria',
   title_2: 'Kwantowa',
   AUTHOR: ['Mateusz Słotwiński'],
-  color: '#0E4F60',
+  color: '#004260',
   icon: 'quantum_engineering.svg',
   pages: 500,
   image: 'quantum_engineering.jpg',
@@ -374,6 +442,7 @@ export default class Examples {
   static Chemistry = (vol: number) => SetVol(Chemistry, vol)
   static Economics = (vol: number) => SetVol(Economics, vol)
   static Biophysics = (vol: number) => SetVol(Biophysics, vol)
+  static Astrophysics = (vol: number) => SetVol(Astrophysics, vol)
   static Telecommunications = (vol: number) => SetVol(Telecommunications, vol)
 
   static PhysicsNanostr = (vol: number) => SetVol(PhysicsNanostr, vol)
