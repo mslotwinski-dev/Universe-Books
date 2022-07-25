@@ -349,7 +349,7 @@ const PhysicsNanostr: Data = {
       'Metody magazynowania i przetwarzania energii,',
       'fotowoltaika, ogniwa paliwowe',
     ],
-    ['Komputerowe metody modelowania i projektowania materiałów'],
+    ['Komputerowe metody modelowania i projektowania', 'materiałów'],
   ],
 
   PART: 0,

@@ -3,7 +3,6 @@ import { romanize } from './roman'
 
 export const render = (c: HTMLCanvasElement | null, data: Data): void => {
   if (c) {
-    c.style.display = 'block'
     const ctx = c.getContext('2d')
     const img = new Image()
     const background = new Image()

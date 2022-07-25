@@ -27,7 +27,6 @@ const getLimitedTextArr = (text: string, size: number): string[][] => {
 
 export const renderback = (c: HTMLCanvasElement | null, data: Data): void => {
   if (c) {
-    c.style.display = 'block'
     const ctx = c.getContext('2d')
     const background = new Image()
     const logo = new Image()
@@ -40,6 +39,8 @@ export const renderback = (c: HTMLCanvasElement | null, data: Data): void => {
         ctx.fillRect(0, 0, c.width, c.height)
         ctx.drawImage(background, 0, 0, c.width, c.height)
         ctx.fillStyle = '#e3e3e3'
+
+        // ctx.filter = 'drop-shadow(0px 0px 2px #00000030)'
 
         const TextArr = getLimitedTextArr(data.about, 70)
         const size = 20
@@ -56,6 +57,8 @@ export const renderback = (c: HTMLCanvasElement | null, data: Data): void => {
         ctx.filter =
           'invert(0.5) brightness(1000) brightness(0.9) drop-shadow(0px 0px 7px #000)'
         ctx.drawImage(logo, c.width - 220, c.height - 330, 200, 200)
+
+        ctx.filter = 'none'
       }
     }
     background.src = '/back.svg'

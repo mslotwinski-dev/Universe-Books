@@ -142,3 +142,20 @@ textarea {
   background-color: #00647d;
   margin-bottom: 20px;
 }
+
+.unrender {
+  color: #e3e3e3;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 10px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.hidemexD {
+  display: none;
+}

@@ -3,7 +3,6 @@ import { romanize } from './roman'
 
 export const rendermid = (c: HTMLCanvasElement | null, data: Data): void => {
   if (c) {
-    c.style.display = 'block'
     c.style.width = `${0.00485 * data.pages}cm`
     c.width = 0.2425 * data.pages
     const ctx = c.getContext('2d')
