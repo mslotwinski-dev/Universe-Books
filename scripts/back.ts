@@ -57,8 +57,6 @@ export const renderback = (c: HTMLCanvasElement | null, data: Data): void => {
         ctx.filter =
           'invert(0.5) brightness(1000) brightness(0.9) drop-shadow(0px 0px 7px #000)'
         ctx.drawImage(logo, c.width - 220, c.height - 330, 200, 200)
-
-        ctx.filter = 'none'
       }
     }
     background.src = '/back.svg'

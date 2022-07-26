@@ -26,9 +26,9 @@ const Home: NextPage = () => {
     ]
 
     for (const can of canvasarray) {
-      if (!can) return
-      const ctx = can.getContext('2d')
-      if (!ctx) return
+      const ctx = can?.getContext('2d')
+      if (!can || !ctx) return
+      ctx.filter = 'none'
       ctx?.clearRect(0, 0, can.width, can.height)
     }
 
