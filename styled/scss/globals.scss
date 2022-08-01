@@ -7,8 +7,9 @@
 body {
   display:flex;
   margin:0;
-  width:100vw;
-  height:100vh;
+  padding: 20px;
+  width:100vw !important;
+  overflow-x: hidden;
   justify-content:center;
   align-items:center;
   background:#262626;
@@ -88,7 +89,6 @@ textarea {
 
 #container {
   min-width: 50vw;
-  height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,6 +97,7 @@ textarea {
 
 #examples {
   width: 100%;
+  max-width: 1300px;
   padding: 5px;
   display: flex;
   justify-content: center;
@@ -161,4 +162,14 @@ textarea {
 
 .hidemexD {
   display: none;
+}
+
+.expand {
+  padding: 10px;
+  margin-bottom: 10px; 
+  display: inline-block;
+  background-color: #00647d;
+  color: #e3e3e3;
+  border-radius: 10px;
+  opacity: 0.4;
 }

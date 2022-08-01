@@ -1,5 +1,6 @@
 import { Data } from '../types/data'
 import { romanize } from './roman'
+import config from '../config/config'
 
 const getLimitedTextArr = (text: string, size: number): string[][] => {
   const arr = []
@@ -40,7 +41,7 @@ export const renderback = (c: HTMLCanvasElement | null, data: Data): void => {
         ctx.drawImage(background, 0, 0, c.width, c.height)
         ctx.fillStyle = '#e3e3e3'
 
-        // ctx.filter = 'drop-shadow(0px 0px 2px #00000030)'
+        config.production && (ctx.filter = 'drop-shadow(0px 0px 2px #00000030)')
 
         const TextArr = getLimitedTextArr(data.about, 70)
         const size = 20

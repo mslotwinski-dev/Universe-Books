@@ -1,11 +1,8 @@
 import React, {useState} from 'react'
 import Image from 'next/image'
 
+import { mainExamples, allExamples } from './examples/arrays'
 import {Data} from '../types/data'
-import Examples from './examples'
-
-import VolModal from './pick'
-
 
 const Inputs: React.FunctionComponent = (props:any) => {
   const [title, setTitle] = useState('')
@@ -20,6 +17,8 @@ const Inputs: React.FunctionComponent = (props:any) => {
   const [pages, setPages] = useState(1)
   const [about, setAbout] = useState('')
   const [example, setExample] = useState(0)
+
+  const [showAll, toggleAll] = useState(false)
 
   const changeTitleHandler = (event:any) => {
     const value = event.target.value
@@ -70,48 +69,66 @@ const Inputs: React.FunctionComponent = (props:any) => {
     props.onSubmit(data)
   }
 
-  const allExamples = [
-    Examples.Mathematics,
-    Examples.Physics,
-    Examples.Electronics,
-    Examples.Informatics,
-    Examples.Economics,
-    Examples.Chemistry,
-    Examples.Biophysics,
-    Examples.Telecommunications,
-    Examples.Astrophysics,
-    Examples.PhysicsNanostr,
-    Examples.PhysicsNuclear,
-    Examples.QuantumEngineering
-  ]
-
   return (
       <main id="container" className="inputs">
-        <div id="examples">
-        {[...Array(allExamples.length).keys()].map((e) => 
-          <div
-            key={e}
-            className={e == example ? 'example thisPart' : 'example'}
-            style={{backgroundColor: allExamples[e](1).color}}
-          >
-            <Image
-              alt={allExamples[e](1).TITLE}
-              width="70"
-              height="70"
-              src={`/icons/sciences/${allExamples[e](1).icon}`}
-              onClick={()=> setExample(e)}
-            />
-          </div>
-        )}
-        </div>
-
-        <div id="examples">
-          {[...Array(allExamples[example](1).levels.length).keys()].map((e) => 
-            <div key={e} className="example part" onClick={() => generateCanvas(allExamples[example](e+1))} style={{backgroundColor: allExamples[example](1).color}} >{e + 1}</div>
-          )}
-        </div>
+        {!showAll
+          ? (
+            <div>
+              <div id="examples">
+                {[...Array(mainExamples.length).keys()].map((e) => 
+                  <div
+                    key={e}
+                    className={e == example ? 'example thisPart' : 'example'}
+                    style={{backgroundColor: mainExamples[e](1).color}}
+                  >
+                    <Image
+                      alt={mainExamples[e](1).TITLE}
+                      width="70"
+                      height="70"
+                      src={`/icons/sciences/${mainExamples[e](1).icon}`}
+                      onClick={()=> setExample(e)}
+                    />
+                  </div>
+                )}
+              </div>
+              <div id="examples">
+                {[...Array(mainExamples[example](1).levels.length).keys()].map((e) => 
+                  <div key={e} className="example part" onClick={() => generateCanvas(mainExamples[example](e+1))} style={{backgroundColor: mainExamples[example](1).color}} >{e + 1}</div>
+                )}
+              </div>
+              <div id="examples">
+                <div onClick={()=>toggleAll(true)} className="expand">EXPAND</div>
+              </div>
+            </div>)
+          : (
+            <div>
+              <div id="examples">
+                {[...Array(allExamples.length).keys()].map((e) => 
+                  <div
+                    key={e}
+                    className={e == example ? 'example thisPart' : 'example'}
+                    style={{backgroundColor: allExamples[e](1).color}}
+                  >
+                    <Image
+                      alt={allExamples[e](1).TITLE}
+                      width="70"
+                      height="70"
+                      src={`/icons/sciences/${allExamples[e](1).icon}`}
+                      onClick={()=> setExample(e)}
+                    />
+                  </div>
+                )}
+              </div>
+              <div id="examples">
+                {[...Array(allExamples[example](1).levels.length).keys()].map((e) => 
+                  <div key={e} className="example part" onClick={() => generateCanvas(allExamples[example](e+1))} style={{backgroundColor: allExamples[example](1).color}} >{e + 1}</div>
+                )}
+              </div>
+            </div>
+          )
+        }
         
-
+        
         
         <input value={title} onChange={changeTitleHandler} id="title" placeholder="Tytuł" />
         <input value={title_2} onChange={changeTitle2Handler} id="subtitle" placeholder="Tytuł 2" />
