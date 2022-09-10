@@ -85,18 +85,6 @@ export const AutomaticsRobotics: Data = {
   levels: [['Chemia budowlana i materiały budowlane']],
 }
 
-export const Biochemistry: Data = {
-  TITLE: 'Budownictwo',
-  title_2: '',
-  AUTHOR: ['Mateusz Słotwiński'],
-  color: '#111',
-  icon: 'biochemistry.svg',
-  pages: 500,
-  image: 'civil_engineering.jpg',
-  about: aboutplaceholder,
-  levels: [['Chemia budowlana i materiały budowlane']],
-}
-
 export const Bioeconomy: Data = {
   TITLE: 'Biogospodarka',
   title_2: '',

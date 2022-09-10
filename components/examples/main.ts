@@ -1,6 +1,6 @@
 import { Data } from '../../types/data'
 
-export const aboutplaceholder = `Podstawy fizyki atomu wydanie 2 to nowa, odświeżona wersja znanego podręcznika, w której Autorka kompleksowo omawia zagadnienia związane z fizyką atomu.
+const aboutplaceholder = `Podstawy fizyki atomu wydanie 2 to nowa, odświeżona wersja znanego podręcznika, w której Autorka kompleksowo omawia zagadnienia związane z fizyką atomu.
 
 Zarówno atomy różnych pierwiastków, jak i atomy różnych izotopów danego pierwiastka, a także atomy tego samego izotopu, ale będące w różnych stanach energetycznych (w różnych stanach wzbudzenia), różnią się od siebie w sposób wykrywalny doświadczalnie metodami fizyki atomowej. Te charakterystyczne, unikatowe cechy danego atomu wynikają z jego wewnętrznej struktury, określonej przede wszystkim usytuowaniem poszczególnych elektronów w powłoce elektronowej, a także, choć w mniejszym stopniu, własnościami jądra. Badanie i opis tej struktury stanowi przedmiot współczesnej fizyki atomu.
 
@@ -22,7 +22,7 @@ export const Mathematics: Data = {
   about: aboutplaceholder,
   levels: [
     [
-      'Wstęp do matematyki i algebra liniowa: wielomiany,',
+      'Wstęp do matematyki, algebra liniowa: wielomiany,',
       'macierze, wyznaczniki, przestzenie, rachunek wektorowy',
     ],
     ['Algebra abstrakcyjna: grupy, pierścienie i ciała'],
@@ -68,11 +68,11 @@ export const Physics: Data = {
   levels: [
     [
       'Mechanika: ruch postępowy i obrotowy, siły i równowaga,',
-      'teoria grawitacji Newtona, szczególna teoria względności',
+      'mechanika analityczna, teoria grawitacji Newtona',
     ],
     [
-      'Podstawy hydrodynamiki oraz mechaniki ośrodków ciągłych,',
-      'teoria sprężystości i drgania, fale mechaniczne, akustyka',
+      'Podstawy hydrodynamiki, teoria sprężystości i drgania,',
+      'fale mechaniczne, akustyka, szczególna teoria względności',
     ],
     [
       'Termodynamika i fizyka statystyczna, kinetyczna',
@@ -83,10 +83,7 @@ export const Physics: Data = {
       'elektryczny, elektromagnetyzm, elementy elektroniki',
     ],
     ['Fale elektromagnetyczne, optyka geometryczna i falowa'],
-    [
-      'Mechanika kwantowa, wstęp do kwantowej',
-      'teorii pola oraz fizyki współczesnej',
-    ],
+    ['Mechanika kwantowa, optyka kwantowa,', 'wstęp do fizyki współczesnej'],
     [
       'Fizyka materii skondensowanej, podstawy fizyki',
       'półprzewodników, przewodnictwo elektryczne, fotonika',
@@ -97,6 +94,18 @@ export const Physics: Data = {
       'grawitacji, ogólna teoria względności, grawitacja kwantowa',
     ],
   ],
+}
+
+export const Biochemistry: Data = {
+  TITLE: 'Budownictwo',
+  title_2: '',
+  AUTHOR: ['Mateusz Słotwiński'],
+  color: '#81a50a',
+  icon: 'biochemistry.svg',
+  pages: 500,
+  image: 'civil_engineering.jpg',
+  about: aboutplaceholder,
+  levels: [['Chemia budowlana i materiały budowlane']],
 }
 
 export const Electronics: Data = {
@@ -165,7 +174,7 @@ export const Mechatronics: Data = {
   TITLE: 'Mechatronika',
   title_2: '',
   AUTHOR: ['Mateusz Słotwiński'],
-  color: '#566672',
+  color: '#62737C',
   icon: 'mechatronics.svg',
   pages: 500,
   image: 'mechatronics.jpg',
@@ -431,8 +440,7 @@ export const QuantumEngineering: Data = {
       'wstęp do teorii przejść fazowych',
     ],
     ['Optyka kwantowa'],
-    ['Informatyka kwantowa'],
-    ['Kryptografia kwantowa'],
+    ['Informatyka kwantowa i kryptografia kwantowa'],
     [
       'Plazmonika nanostruktur metalicznych, elementy chemii',
       'kwantowej, teoria dekoherencji',

@@ -19,6 +19,7 @@ export default class Examples {
   static Economics = (vol: number) => SetVol(_M.Economics, vol)
   static Biophysics = (vol: number) => SetVol(_M.Biophysics, vol)
   static Astrophysics = (vol: number) => SetVol(_M.Astrophysics, vol)
+  static Biochemistry = (vol: number) => SetVol(_M.Biochemistry, vol)
   static Telecommunications = (vol: number) =>
     SetVol(_M.Telecommunications, vol)
 
@@ -34,7 +35,6 @@ export default class Examples {
   static Architecture = (vol: number) => SetVol(_R.Architecture, vol)
   static AutomaticsRobotics = (vol: number) =>
     SetVol(_R.AutomaticsRobotics, vol)
-  static Biochemistry = (vol: number) => SetVol(_R.Biochemistry, vol)
   static Bioeconomy = (vol: number) => SetVol(_R.Bioeconomy, vol)
   static Biology = (vol: number) => SetVol(_R.Biology, vol)
   static Biotechnology = (vol: number) => SetVol(_R.Biotechnology, vol)

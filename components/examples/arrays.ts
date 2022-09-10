@@ -9,6 +9,7 @@ export const mainExamples = [
   Examples.Mechatronics,
   Examples.Economics,
   Examples.Chemistry,
+  Examples.Biochemistry,
   Examples.Biophysics,
   Examples.Telecommunications,
   Examples.Astrophysics,
